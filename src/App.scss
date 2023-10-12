@@ -1,0 +1,95 @@
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Center content vertically on the page */
+  position: relative; 
+}
+
+/* Video container */
+video {
+  max-width: 100%; /* to Ensure that video doesn't exceed its container */
+}
+
+.notifications {
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+  z-index: 2; 
+}
+
+.notification {
+  background-color: rgba(0, 123, 255, 0.5); 
+  color: white;
+  padding: 10px; 
+  margin: 10px;
+  border: none; 
+  font-size: 14px; 
+  animation: fadeInOut 5s ease-in-out; 
+  border-radius: 4px; 
+  max-width: 300px;
+}
+
+/* Style for different events */
+.goal {
+  background-color: rgba(0, 123, 0, 0.5); // Semi-transparent green background
+  color: white;
+}
+
+.card {
+  background-color: rgba(255, 193, 7, 0.5); // Semi-transparent yellow background
+  color: white;
+}
+
+.endHalf {
+  background-color: rgba(220, 53, 69, 0.5); // Semi-transparent red background
+  color: white;
+}
+.endGameButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.endGameButton:hover {
+  background-color: #0056b3;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.ticker {
+  position: absolute;
+  top: 10px; 
+  right: 0; 
+  left: 0; 
+  z-index: 3; 
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: tickerAnimation 10s linear infinite;
+}
+
+@keyframes tickerAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
